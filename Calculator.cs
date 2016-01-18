@@ -10,6 +10,12 @@ namespace Kontur.Courses.Git
 				return lastResult;
 			if (args.Length == 1)
 				return lastResult = double.Parse(args[0]);
+			if (args.Length == 2)
+			{
+				var v1 = double.Parse(args[0]);
+				var v2 = double.Parse(args[2]);
+				return lastResult = Execute("+", v1, v2);
+			}
 			if (args.Length == 3)
 			{
 				return lastResult = Execute(args[1],double.Parse(args[0]), double.Parse(args[2]));
